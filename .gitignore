@@ -1,0 +1,10 @@
+# .gitignore
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints
+data/*.db
+data/*.csv
+models/*.pth
+models/*.onnx
+.env
