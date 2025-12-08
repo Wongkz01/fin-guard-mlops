@@ -1,0 +1,23 @@
+artifact_path: file:///C:/Users/R O G/VS_Code_Projects/fin-guard-mlops/mlruns/1/models/m-c56bfb8c72864e77b062714ff74c48ad/artifacts
+flavors:
+  python_function:
+    config:
+      device: null
+    data: data
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pytorch
+    pickle_module_name: mlflow.pytorch.pickle_module
+    python_version: 3.11.9
+  pytorch:
+    code: null
+    model_data: data
+    pytorch_version: 2.9.1+cpu
+mlflow_version: 3.7.0
+model_id: m-c56bfb8c72864e77b062714ff74c48ad
+model_size_bytes: 7909
+model_uuid: m-c56bfb8c72864e77b062714ff74c48ad
+prompts: null
+run_id: a0b07f50540d4f5fadc81164b49c246d
+utc_time_created: '2025-12-08 10:05:06.886057'
