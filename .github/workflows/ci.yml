@@ -32,4 +32,4 @@ jobs:
     # 4. Run the Tests
     - name: Run Unit Tests
       run: |
-        pytest
+        python -m pytest
