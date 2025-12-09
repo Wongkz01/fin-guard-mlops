@@ -1,0 +1,35 @@
+name: FinGuard CI Pipeline
+
+# Trigger this robot whenever we push to the 'main' branch
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    # Run on a virtual Linux machine provided by GitHub
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Download your code
+    - uses: actions/checkout@v3
+
+    # 2. Install Python 3.11
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.11"
+
+    # 3. Install your dependencies
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest httpx
+
+    # 4. Run the Tests
+    - name: Run Unit Tests
+      run: |
+        pytest
